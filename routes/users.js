@@ -13,6 +13,28 @@ router.get('/', function (req, res, next) {
 });
 
 
+
+router.get('/userId', async (req, res, next) => {
+  try {
+    let userId = JSON.stringify(req.headers.userid);
+    console.log(userId);
+    const user = await db.query(`select prefix, firstname ,lastname,email,money from users_table where id = ${userId}`);
+    if (user.length > 0) {
+      return res.status(200).json(user);
+    } else {
+      return res.status(401).json({
+        status: 401,
+        message: "users already exist"
+      });
+    }
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: error.message, status: '500' });
+  }
+});
+
+
+
 // สมัคสมาชิก
 router.post('/register', async (req, res) => {
   try {
