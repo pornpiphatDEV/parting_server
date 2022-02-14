@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var parkingRouter = require('./routes/parking');
 var scanRouter = require('./routes/scan');
 var barrierRouter = require('./routes/barrier');
+var bookingtime = require('./routes/bookingtime');
 let db = require('./db/database');
 let db_settings = require('./db/database_seting');
 var app = express();
@@ -33,7 +34,7 @@ app.use('/users', usersRouter);
 app.use('/parkingslot', parkingRouter);
 app.use('/scan',scanRouter);
 app.use('/barrier',barrierRouter);
-
+app.use('/bookingtime',bookingtime);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
