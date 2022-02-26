@@ -18,7 +18,7 @@ router.get('/userId', async (req, res, next) => {
   try {
     let userId = JSON.stringify(req.headers.userid);
     console.log(userId);
-    const user = await db.query(`select prefix, firstname ,lastname,email,money from users_table where id = ${userId}`);
+    const user = await db.query(`select prefix, firstname ,lastname,email,money,status_agreement from users_table where id = ${userId}`);
     if (user.length > 0) {
       return res.status(200).json(user);
     } else {
@@ -346,3 +346,100 @@ router.post('/confirmat', async (req, res) => {
 
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const express = require('express')
+// const app = express()
+// const http = require("http");
+
+// const server = http.createServer(app);
+// const io = require("socket.io")(server);
+// const bodyParser = require('body-parser')
+// const cors = require('cors')
+
+// app.use(cors())
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: true }))
+// const port = process.env.PORT || 3001;
+// const db = require('./db/database')
+
+
+// app.get('/',async (req, res) => {
+ 
+//     let limitbooking  =await db.query('select * from limit_table;');
+//     res.send(limitbooking)
+    
+// })
+
+
+// io.on("connection", (socket) => {
+//   console.log(socket.id, "has joined");
+//   socket.on("disconnect", () => {
+//     console.log(socket.id, 'has disconnect'); // undefined
+//   });
+// });
+
+// app.post('/booking', async (req, res) => {
+//   let userid = req.body.userid;
+//   try {
+//     const chekeuser = await db.query(`select * from users_table where id = '${userid}';`);
+//     const bookinglimit = await db.query(`select * from limit_table`);
+    
+//     const chekebooking = await db.query(`select * from booking_table where users_table_id = ${userid}  and booking_status = 'รอการเข้าจอด';`);
+
+//     console.log(chekebooking);
+//     if (chekeuser.length === 0) {
+//       return res.status(401).json({
+//         status: 401,
+//         message: "no email for this system.",
+//       });
+//     }
+
+//     if (bookinglimit[0].limitbooking <= 0) {
+//       return res.status(401).json({
+//         status: 401,
+//         message: "booking limit for this system.",
+//       });
+//     }
+
+//     if (chekebooking.length > 0) {
+//       return res.status(401).json({
+//         status: 401,
+//         message: "has already been reserved in the system.",
+//       });
+//     }
+
+  
+
+//     let insertbooking = `insert into booking_table(booking_code,booking_status,users_table_id) values('${qrcode}' ,'รอการเข้าจอด',${user_id});`;
+//     db.query(insertbooking, (err, result) => {
+//       if (err) throw err;
+//       db.query(`update limit_table set limitbooking = limitbooking-1 where id=1;`, (err, result) => {
+//         if (err) throw err;
+//         res.status(200).json(result);
+//       });
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//     res.status(500).json({ message: error.message, status: '500' });
+//   }
+// });
+
+
+// server.listen(port, () => {
+//   console.log("server started");
+// });
