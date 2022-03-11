@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title><!-- Meta -->
+    <title>รายได้การบริการ</title><!-- Meta -->
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -68,11 +68,9 @@
                                     id="user-dropdown-toggle" role="button"><img alt="user profile"
                                         class="rounded-circle" src="assets/images/atmin.jpg"></a>
                                 <ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
+
                                     <li>
-                                        <a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+                                        <a class="dropdown-item" href="/logout">ออกจากระบบ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -99,7 +97,7 @@
                     <ul class="app-menu list-unstyled accordion" id="menu-accordion">
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link active" href="dashboard.html"><span class="nav-icon"><svg
+                            <a class="nav-link active" href="/dashboard"><span class="nav-icon"><svg
                                         class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -110,21 +108,13 @@
                                     </svg></span> <span class="nav-link-text">หน้าหลัก</span></a>
                             <!--//nav-link-->
                         </li>
-
-
-                        <li class="nav-item">
-							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
-										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-									class="nav-link-text">การจอง</span></a>
-							<!--//nav-link-->
-						</li>
-                        
                         <!--//nav-item-->
+
+
+       
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
+                            <a class="nav-link" href="income"><span class="nav-icon"><svg class="bi bi-card-list"
                                         height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">รายได้</span></a>
@@ -133,7 +123,7 @@
                         <!--//nav-item-->
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="member.html"><span class="nav-icon"><svg class="bi bi-card-list"
+                            <a class="nav-link" href="/member"><span class="nav-icon"><svg class="bi bi-card-list"
                                         height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">สมาชิก</span></a>
@@ -142,8 +132,8 @@
                         <!--//nav-item-->
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-                                        height="1em" viewbox="0 0 16 16" width="1em"
+                            <a class="nav-link" href="/parkingreport"><span class="nav-icon"><svg
+                                        class="bi bi-card-list" height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">รายงานการเข้าลานจอด</span></a>
                             <!--//nav-link-->
@@ -168,23 +158,25 @@
                         <h3> รายได้ทั้งหมด </h3>
                     </div>
 
-                    <form action="/action_page.php">
+                    <!-- <form action="/action_page.php">
                         <label for="birthday">วันที่:</label>
                         <input type="date" id="birthday" name="birthday">
                         <label for="birthday">ถึง:</label>
                         <input type="date" id="birthday" name="birthday">
                         <input type="submit">
-                    </form>
+                    </form> -->
 
-                    <div class="panel-body mt-2">
+                    <div class="panel-body mt-4">
                         <div class="card">
                             <div class="container mt-2">
-                                <table id="example" class="table table-striped" style="width:100%">
+                                <table id="example" class="display" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="cell">วัน/เดือน/ปี </th>
                                             <th class="cell">ชื่อ-นามสกุล </th>
                                             <th class="cell">หมายเลขทะเบียนรถ </th>
+
+                                            <th class="cell">สถานะการจอง </th>
                                             <th class="cell">ชำระค่าจอง
                                             </th>
                                             <th class="cell">ชำระค่าจอด
@@ -192,44 +184,129 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="cell">01-06-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="">20</span>
-                                            </td>
-                                            <td class="cell">
-                                                <span class="">120</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="">20</span>
-                                            </td>
-                                            <td class="cell">
-                                                <span class="">140</span>
-                                            </td>
-                                        </tr>
+
+                                        <% var j=0 ;%>
+
+                                            <% for(var i=0; i<bookingservice.length; i++) {%>
+
+
+
+
+
+                                                <% if (bookingservice[i].booking_status !=='สำเร็จ' ) { %>
+                                                    <tr>
+                                                        <td class="cell">
+                                                            <%= bookingservice[i].bookingtimestamp.toLocaleString() %>
+                                                        </td>
+                                                        <td class="cell">
+                                                            <%= bookingservice[i].prefix %>
+                                                                <%= bookingservice[i].firstname %>
+                                                                    <%= bookingservice[i].lastname %>
+                                                        </td>
+
+                                                        <td class="cell">
+                                                            <%= bookingservice[i].car_carregistration %>
+                                                        </td>
+
+
+                                                        <% if (bookingservice[i].booking_status==='ยกเลิก' ||
+                                                            bookingservice[i].booking_status==='หมดอายุการใช้งาน' ) { %>
+                                                            <td class="cell"><span class="badge bg-danger">
+                                                                    <%= bookingservice[i].booking_status %>
+                                                                </span>
+                                                            </td>
+                                                            <%} else { %>
+                                                                <td class="cell"><span class="badge bg-warning">
+                                                                        <%= bookingservice[i].booking_status %>
+                                                                    </span>
+                                                                </td>
+                                                                <% } %>
+
+
+
+
+
+
+
+                                                                    <td class="cell">
+                                                                        20
+                                                                    </td>
+                                                                    <td class="cell">
+                                                                        -
+                                                                    </td>
+                                                    </tr>
+
+                                                    <%} else { %>
+
+
+
+
+                                                        <tr>
+                                                            <td class="cell">
+                                                                <%= income[j].bookingtimestamp.toLocaleString() %>
+                                                            </td>
+                                                            <td class="cell">
+                                                                <%= income[j].prefix %>
+                                                                    <%= income[j].firstname %>
+                                                                        <%= income[j].lastname %>
+                                                            </td>
+
+                                                            <td class="cell">
+                                                                <%= income[j].car_carregistration %>
+                                                            </td>
+                                                            <td class="cell"><span class="badge bg-success">
+                                                                    <%= income[j].booking_status %>
+                                                                </span>
+                                                            </td>
+                                                            <td class="cell">
+                                                                20
+                                                            </td>
+                                                            <td class="cell">
+                                                                <%= income[j].servicecharge %>
+                                                            </td>
+                                                        </tr>
+
+
+
+
+                                                        <% j++ ;%>
+                                                            <% } %>
+
+
+                                                                <% } %>
 
                                     </tbody>
+
                                     <tfoot>
+
                                         <tr>
-                                            <th>ยอดชำระการจอง:</th>
-                                            <th>40</th>
-                                            <th>ยอดชำระค่าจอด:</th>
-                                            <th>260</th>
+                                            <th style="text-align:right">รวมค่าการจอง:</th>
+                                            <th>
+                                                <%= bookingamount * 20;%>
+                                            </th>
+                                            <th style="text-align:right">ยอดรวมค่าบริการ:</th>
+                                            <th>
+                                                <%= sumservicecharge %>
+                                            </th>
+                                            <th style="text-align:right">ยอดรวมรายได้ทั้งหมด: </th>
+                                            <th>
+                                                <%= sumservicecharge + (bookingamount * 20)%>
+                                            </th>
                                         </tr>
-                                        <tr>
-                                            <th colspan="4" style="text-align:right">ยอดรวม:</th>
-                                            <th> 300</th>
-                                        </tr>
+
+
+
                                     </tfoot>
+                                    <!-- <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </tfoot> -->
                                 </table>
                             </div>
                         </div>
@@ -262,6 +339,7 @@
         </script>
     </div>
 </body>
+
 </html>
 
 
@@ -271,6 +349,7 @@
         $('#example').DataTable({
             dom: 'Bfrtip',
             buttons: [
+
                 {
 
                     extend: 'csv',
@@ -280,6 +359,8 @@
                     filename: 'CsvTest',
                     title: 'CsvTest'
                 },
+
+                { extend: 'excelHtml5', footer: true },
                 {
                     extend: 'print',
                     text: 'พิมพ์',
@@ -287,16 +368,14 @@
                     customize: function (win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
-                            .prepend(
-                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
-                            );
+                          
 
                         $(win.document.body).find('table')
                             .addClass('compact')
                             .css('font-size', 'inherit');
-                    }
+                    },
+                    footer: true
                 }
-
             ]
         });
     });

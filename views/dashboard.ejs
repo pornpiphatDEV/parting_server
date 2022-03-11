@@ -12,6 +12,9 @@
 
 	<script defer src="assets/plugins/fontawesome/js/all.min.js">
 	</script><!-- App CSS -->
+
+<script defer src="assets/plugins/fontawesome/js/all.min.js">
+</script><!-- App CSS -->
 	<link href="assets/css/portal.css" id="theme-style" rel="stylesheet">
 </head>
 
@@ -51,13 +54,11 @@
 							<div class="app-utility-item app-user-dropdown dropdown">
 								<a aria-expanded="false" class="dropdown-toggle" data-bs-toggle="dropdown" href="#"
 									id="user-dropdown-toggle" role="button"><img alt="user profile"
-										class="rounded-circle" src="assets/images/atmin.jpg"></a>
+										class="rounded-circle" src="/images/profile/"></a>
 								<ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
+									
 									<li>
-										<a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+										<a class="dropdown-item" href="/logout">ออกจากระบบ</a>
 									</li>
 								</ul>
 							</div>
@@ -84,7 +85,7 @@
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link active" href="dashboard.html"><span class="nav-icon"><svg
+							<a class="nav-link active" href="/dashboard"><span class="nav-icon"><svg
 										class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -98,17 +99,10 @@
 						<!--//nav-item-->
 
 
+					
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
-										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-									class="nav-link-text">การจอง</span></a>
-							<!--//nav-link-->
-						</li>
-						<li class="nav-item">
-							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
+							<a class="nav-link" href="income"><span class="nav-icon"><svg class="bi bi-card-list"
 										height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">รายได้</span></a>
@@ -117,7 +111,7 @@
 						<!--//nav-item-->
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="member.html"><span class="nav-icon"><svg class="bi bi-card-list"
+							<a class="nav-link" href="/member"><span class="nav-icon"><svg class="bi bi-card-list"
 										height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">สมาชิก</span></a>
@@ -126,8 +120,8 @@
 						<!--//nav-item-->
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
+							<a class="nav-link" href="/parkingreport"><span class="nav-icon"><svg
+										class="bi bi-card-list" height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">รายงานการเข้าลานจอด</span></a>
 							<!--//nav-link-->
@@ -152,61 +146,26 @@
 						<div class="app-card-body p-3 p-lg-4">
 							<h1 class="app-page-title text-center ">สถานะช่องจอด</h1>
 							<div class="row g-4 mb-4">
-								<div class="col-6 col-lg-4">
-									<div class="card border-success mb-3" style="max-width: 18rem;">
-										<div class="card-header text-center bg-success">
-											ช่องจอดที่
-										</div>
-										<div class="card-body text-success">
-											<h1 class="card-title text-center">ว่าง</h1>
-										</div>
-									</div>
+								<div class="col-6 col-lg-4" id="slot1">
+
 								</div>
 								<!--//col-->
-								<div class="col-6 col-lg-4">
-									<div class="card border-success mb-3" style="max-width: 18rem;">
-										<div class="card-header text-center bg-success">
-											ช่องจอดที่
-										</div>
-										<div class="card-body text-success">
-											<h1 class="card-title text-center">ว่าง</h1>
-										</div>
-									</div>
+								<div class="col-6 col-lg-4" id="slot2">
+
 								</div>
 								<!--//col-->
-								<div class="col-6 col-lg-4">
-									<div class="card border-success mb-3" style="max-width: 18rem;">
-										<div class="card-header text-center bg-success">
-											ช่องจอดที่
-										</div>
-										<div class="card-body text-success">
-											<h1 class="card-title text-center">ว่าง</h1>
-										</div>
-									</div>
+								<div class="col-6 col-lg-4" id="slot3">
+
 								</div>
 								<!--//col-->
 							</div>
 							<div class="row g-4 mb-4 justify-content-md-center">
-								<div class="col-6 col-lg-4 ">
-									<div class="card border-danger mb-3" style="max-width: 18rem;">
-										<div class="card-header text-center bg-danger">
-											ช่องจอดที่
-										</div>
-										<div class="card-body text-danger">
-											<h1 class="card-title text-center">ไม่ว่าง</h1>
-										</div>
-									</div>
+								<div class="col-6 col-lg-4 " id="slot4">
+
 								</div>
 								<!--//col-->
-								<div class="col-6 col-lg-4">
-									<div class="card border-danger mb-3" style="max-width: 18rem;">
-										<div class="card-header text-center bg-danger">
-											ช่องจอดที่
-										</div>
-										<div class="card-body text-danger">
-											<h1 class="card-title text-center">ไม่ว่าง</h1>
-										</div>
-									</div>
+								<div class="col-6 col-lg-4" id="slot5">
+
 								</div>
 								<!--//col-->
 							</div>
@@ -223,7 +182,7 @@
 							<div class="app-card-body p-3 p-lg-4">
 								<h4 class="text-white ">ยอดการจอง</h4>
 								<div class="fs-1">
-									10
+									<%= bookingamount %>
 								</div>
 							</div>
 							<!--//app-card-body-->
@@ -238,7 +197,7 @@
 							<div class="app-card-body p-3 p-lg-4">
 								<h4 class="text-white mb-1">ยอดรถเข้า</h4>
 								<div class="fs-1">
-									10
+									<%= sumparked %>
 								</div>
 							</div>
 							<!--//app-card-body-->
@@ -252,7 +211,8 @@
 							<div class="app-card-body p-3 p-lg-4">
 								<h4 class="text-white mb-1">ยอดรายได้</h4>
 								<div class="fs-1">
-									2,250
+
+									<%= sumservicecharge  + (bookingamount * 20) %>
 								</div>
 							</div>
 							<!--//app-card-body-->
@@ -290,7 +250,91 @@
 
 		<script src="assets/js/app.js">
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 	</div>
 </body>
 
 </html>
+
+<script>
+	var socket = io.connect('http://localhost:3001');
+	socket.on('connect', function (data) {
+		socket.emit('join', 'Hello world from client');
+	});
+	socket.on('parking', function (data) {
+
+
+		let slot1 = data[0].slotstelus;
+		let slot2 = data[1].slotstelus;
+		let slot3 = data[2].slotstelus;
+		let slot4 = data[3].slotstelus;
+		let slot5 = data[4].slotstelus;
+
+		if (slot1 === 1) {
+			document.getElementById("slot1").innerHTML = myFunctionpark(data[0].id);
+		} else {
+			document.getElementById("slot1").innerHTML = myFunctionnotpark(data[0].id);;
+		}
+
+		if (slot2 === 1) {
+			document.getElementById("slot2").innerHTML = myFunctionpark(data[1].id);
+		} else {
+			document.getElementById("slot2").innerHTML = myFunctionnotpark(data[1].id);;
+		}
+
+
+		if (slot3 === 1) {
+			document.getElementById("slot3").innerHTML = myFunctionpark(data[2].id);
+		} else {
+			document.getElementById("slot3").innerHTML = myFunctionnotpark(data[2].id);;
+		}
+
+		if (slot4 === 1) {
+			document.getElementById("slot4").innerHTML = myFunctionpark(data[3].id);
+		} else {
+			document.getElementById("slot4").innerHTML = myFunctionnotpark(data[3].id);;
+		}
+
+
+		if (slot5 === 1) {
+			document.getElementById("slot5").innerHTML = myFunctionpark(data[4].id);
+		} else {
+			document.getElementById("slot5").innerHTML = myFunctionnotpark(data[4].id);;
+		}
+
+
+
+
+	});
+
+
+
+	function myFunctionpark(id) {
+		let park = `	<div class="card border-success mb-3" style="max-width: 18rem;">
+										<div class="card-header text-center bg-success">
+											ช่องจอดที่  ${id}
+										</div>
+										<div class="card-body text-success">
+											<h1 class="card-title text-center">ว่าง</h1>
+										</div>
+									</div>`;
+		return park;
+	}
+
+
+	function myFunctionnotpark(id) {
+
+
+		let notpark = `<div class="card border-danger mb-3" style="max-width: 18rem;">
+										<div class="card-header text-center bg-danger">
+											ช่องจอดที่${id}
+										</div>
+										<div class="card-body text-danger">
+											<h1 class="card-title text-center">ไม่ว่าง</h1>
+										</div>
+									</div>`;
+		return notpark;
+	}
+
+
+</script>

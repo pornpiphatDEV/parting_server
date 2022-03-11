@@ -13,11 +13,16 @@ var bookingtime = require('./routes/bookingtime');
 let db = require('./db/database');
 let db_settings = require('./db/database_seting');
 var app = express();
-let databasesetings =  db_settings();
+let databasesetings = db_settings();
+const session = require('express-session');
 
 
 
-
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,9 +37,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/parkingslot', parkingRouter);
-app.use('/scan',scanRouter);
-app.use('/barrier',barrierRouter);
-app.use('/bookingtime',bookingtime);
+app.use('/scan', scanRouter);
+app.use('/barrier', barrierRouter);
+app.use('/bookingtime', bookingtime);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

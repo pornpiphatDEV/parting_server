@@ -38,14 +38,14 @@
             </div>
             <h2 class="auth-heading text-center mb-5">ลงชื่อเข้าใช้งานระบบ</h2>
             <div class="auth-form-container text-start">
-              <form class="auth-form login-form">
+              <form class="auth-form login-form" action="/auth" method="post"> 
                 <div class="email mb-3">
-                  <label class="sr-only" for="signin-email">Email</label>
+                  <label class="sr-only" for="username">username</label>
                   <input
-                    id="signin-email"
-                    name="signin-email"
+                    id="username"
+                    name="username"
                     type="text"
-                    class="form-control signin-email"
+                    class="form-control username"
                     placeholder="ชื่อเจ้าของระบบ"
                     required="required"
                   />
@@ -55,7 +55,7 @@
                   <label class="sr-only" for="signin-password">Password</label>
                   <input
                     id="signin-password"
-                    name="signin-password"
+                    name="password"
                     type="password"
                     class="form-control signin-password"
                     placeholder="รหัสผ่าน"

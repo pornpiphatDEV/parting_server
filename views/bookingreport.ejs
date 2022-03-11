@@ -39,133 +39,124 @@
 
 <body class="app">
     <header class="app-header fixed-top bg-success">
-        <div class="app-header-inner">
-            <div class="container-fluid py-2">
-                <div class="app-header-content">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <a class="sidepanel-toggler d-inline-block d-xl-none" href="#" id="sidepanel-toggler"><svg
-                                    height="30" role="img" viewbox="0 0 30 30" width="30"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>Menu</title>
-                                    <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round"
-                                        stroke-miterlimit="10" stroke-width="2"></path>
-                                </svg></a>
-                        </div>
-                        <!--//col-->
+		<div class="app-header-inner">
+			<div class="container-fluid py-2">
+				<div class="app-header-content">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-auto">
+							<a class="sidepanel-toggler d-inline-block d-xl-none" href="#" id="sidepanel-toggler"><svg
+									height="30" role="img" viewbox="0 0 30 30" width="30"
+									xmlns="http://www.w3.org/2000/svg">
+									<title>Menu</title>
+									<path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round"
+										stroke-miterlimit="10" stroke-width="2"></path>
+								</svg></a>
+						</div>
+						<!--//col-->
 
-                        <div class="app-utilities col-auto">
-                            <div class="app-utility-item">
-                                <a href="settings.html" title="Settings">
-                                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                                    <svg class="bi bi-gear icon" height="1em" viewbox="0 0 16 16" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"
-                                            fill-rule="evenodd"></path>
-                                        <path
-                                            d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                            <!--//app-utility-item-->
-                            <div class="app-utility-item app-user-dropdown dropdown">
-                                <a aria-expanded="false" class="dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                    id="user-dropdown-toggle" role="button"><img alt="user profile"
-                                        class="rounded-circle" src="assets/images/atmin.jpg"></a>
-                                <ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="login.html">ออกจากระบบ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--//app-user-dropdown-->
-                        </div>
-                        <!--//app-utilities-->
-                    </div>
-                    <!--//row-->
-                </div>
-                <!--//app-header-content-->
-            </div>
-            <!--//container-fluid-->
-        </div>
-        <!--//app-header-inner-->
-        <div class="app-sidepanel" id="app-sidepanel">
-            <div class="sidepanel-drop" id="sidepanel-drop"></div>
-            <div class="sidepanel-inner d-flex flex-column">
-                <div class="app-branding">
-                    <img alt="logo" class=" me-2" src="assets/images/logo2.png" width="50"><span
-                        class="logo-text">Parking system</span>
-                </div>
-                <!--//app-branding-->
-                <nav class="app-nav app-nav-main flex-grow-1" id="app-nav-main">
-                    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
-                        <li class="nav-item">
-                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link active" href="dashboard.html"><span class="nav-icon"><svg
-                                        class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
-                                            fill-rule="evenodd"></path>
-                                        <path d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
-                                            fill-rule="evenodd"></path>
-                                    </svg></span> <span class="nav-link-text">หน้าหลัก</span></a>
-                            <!--//nav-link-->
-                        </li>
-
-
-
-
-                        <li class="nav-item">
+						<div class="app-utilities col-auto">
+							<div class="app-utility-item">
+								<a href="settings.html" title="Settings">
+									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+									<svg class="bi bi-gear icon" height="1em" viewbox="0 0 16 16" width="1em"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"
+											fill-rule="evenodd"></path>
+										<path
+											d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"
+											fill-rule="evenodd"></path>
+									</svg>
+								</a>
+							</div>
+							<!--//app-utility-item-->
+							<div class="app-utility-item app-user-dropdown dropdown">
+								<a aria-expanded="false" class="dropdown-toggle" data-bs-toggle="dropdown" href="#"
+									id="user-dropdown-toggle" role="button"><img alt="user profile"
+										class="rounded-circle" src="assets/images/atmin.jpg"></a>
+								<ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+									</li>
+								</ul>
+							</div>
+							<!--//app-user-dropdown-->
+						</div>
+						<!--//app-utilities-->
+					</div>
+					<!--//row-->
+				</div>
+				<!--//app-header-content-->
+			</div>
+			<!--//container-fluid-->
+		</div>
+		<!--//app-header-inner-->
+		<div class="app-sidepanel" id="app-sidepanel">
+			<div class="sidepanel-drop" id="sidepanel-drop"></div>
+			<div class="sidepanel-inner d-flex flex-column">
+				<div class="app-branding">
+					<img alt="logo" class=" me-2" src="assets/images/logo2.png" width="50"><span
+						class="logo-text">Parking system</span>
+				</div>
+				<!--//app-branding-->
+				<nav class="app-nav app-nav-main flex-grow-1" id="app-nav-main">
+					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
+						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
-										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-									class="nav-link-text">การจอง</span></a>
+							<a class="nav-link active" href="/dashboard"><span class="nav-icon"><svg
+										class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+											fill-rule="evenodd"></path>
+										<path d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+											fill-rule="evenodd"></path>
+									</svg></span> <span class="nav-link-text">หน้าหลัก</span></a>
 							<!--//nav-link-->
 						</li>
-                        <!--//nav-item-->
-                        <li class="nav-item">
-                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-                                        height="1em" viewbox="0 0 16 16" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-                                    class="nav-link-text">รายได้</span></a>
-                            <!--//nav-link-->
-                        </li>
-                        <!--//nav-item-->
-                        <li class="nav-item">
-                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="member.html"><span class="nav-icon"><svg class="bi bi-card-list"
-                                        height="1em" viewbox="0 0 16 16" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-                                    class="nav-link-text">สมาชิก</span></a>
-                            <!--//nav-link-->
-                        </li>
-                        <!--//nav-item-->
-                        <li class="nav-item">
-                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-                                        height="1em" viewbox="0 0 16 16" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-                                    class="nav-link-text">รายงานการเข้าลานจอด</span></a>
-                            <!--//nav-link-->
-                        </li>
-                        <!--//nav-item-->
-                    </ul>
-                    <!--//app-menu-->
-                </nav>
-                <!--//app-nav-->
-            </div>
-            <!--//sidepanel-inner-->
-        </div>
-        <!--//app-sidepanel-->
-    </header>
+						<!--//nav-item-->
+
+
+				
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="income"><span class="nav-icon"><svg class="bi bi-card-list"
+										height="1em" viewbox="0 0 16 16" width="1em"
+										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
+									class="nav-link-text">รายได้</span></a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="/member"><span class="nav-icon"><svg class="bi bi-card-list"
+										height="1em" viewbox="0 0 16 16" width="1em"
+										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
+									class="nav-link-text">สมาชิก</span></a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" href="/parkingreport"><span class="nav-icon"><svg class="bi bi-card-list"
+										height="1em" viewbox="0 0 16 16" width="1em"
+										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
+									class="nav-link-text">รายงานการเข้าลานจอด</span></a>
+							<!--//nav-link-->
+						</li>
+						<!--//nav-item-->
+					</ul>
+					<!--//app-menu-->
+				</nav>
+				<!--//app-nav-->
+			</div>
+			<!--//sidepanel-inner-->
+		</div>
+		<!--//app-sidepanel-->
+	</header>
     <!--//app-header-->
     <!-- MAIN -->
     <div class="app-wrapper">
@@ -177,14 +168,14 @@
                     </div>
 
 
-                    <form action="/action_page.php">
+                    <!-- <form action="/action_page.php">
                         <label for="birthday">วันที่:</label>
                         <input type="date" id="birthday" name="birthday">
                         <label for="birthday">ถึง:</label>
                         <input type="date" id="birthday" name="birthday">
                         <input type="submit" value="ค้นหา" class="btn app-btn-primary">
                         <a type="button" class="btn app-btn-secondary"  href="/action"> ทั้งหมด</a> 
-                    </form>
+                    </form> -->
 
                     <div class="panel-body mt-2">
                         <div class="card">

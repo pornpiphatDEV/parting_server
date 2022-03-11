@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title><!-- Meta -->
+	<title>ผู้ใช้งานทั้งหมด</title><!-- Meta -->
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -72,10 +72,7 @@
 										class="rounded-circle" src="assets/images/atmin.jpg"></a>
 								<ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
 									<li>
-										<a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+										<a class="dropdown-item" href="/logout">ออกจากระบบ</a>
 									</li>
 								</ul>
 							</div>
@@ -102,7 +99,7 @@
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link active" href="dashboard.html"><span class="nav-icon"><svg
+							<a class="nav-link active" href="/dashboard"><span class="nav-icon"><svg
 										class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -113,22 +110,13 @@
 									</svg></span> <span class="nav-link-text">หน้าหลัก</span></a>
 							<!--//nav-link-->
 						</li>
-
-
-
-						<li class="nav-item">
-							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
-										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-									class="nav-link-text">การจอง</span></a>
-							<!--//nav-link-->
-						</li>
-						
 						<!--//nav-item-->
+
+
+					
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
+							<a class="nav-link" href="income"><span class="nav-icon"><svg class="bi bi-card-list"
 										height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">รายได้</span></a>
@@ -137,7 +125,7 @@
 						<!--//nav-item-->
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="member.html"><span class="nav-icon"><svg class="bi bi-card-list"
+							<a class="nav-link" href="/member"><span class="nav-icon"><svg class="bi bi-card-list"
 										height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">สมาชิก</span></a>
@@ -146,8 +134,8 @@
 						<!--//nav-item-->
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
+							<a class="nav-link" href="/parkingreport"><span class="nav-icon"><svg
+										class="bi bi-card-list" height="1em" viewbox="0 0 16 16" width="1em"
 										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
 									class="nav-link-text">รายงานการเข้าลานจอด</span></a>
 							<!--//nav-link-->
@@ -170,6 +158,9 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3> สมาชิกทั้งหมด </h3>
+
+
+
 					</div>
 
 					<div class="panel-body">
@@ -186,34 +177,26 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td class="cell">นาย ภัทรดนัย โกช่วย </td>
-											<td class="cell"> pattharadanai@hotmail.com</td>
-											<td class="cell">ม 112 </td>
-											<td class="cell"><span class="">1854790582</span>
-											</td>
-											<td class="cell">
-												<button type="button" class="btn btn-outline-success">เรียกดู</button>
-												<button type="button" class="btn btn-outline-danger">ลบผู้ใช้</button>
-											</td>
-										</tr>
 
-										<tr>
-											<td class="cell">นาง สมศรี พอเพียง
-											</td>
-											<td class="cell"> somsee@gmail.com
-											</td>
-											<td class="cell">กง 2541
-											</td>
+
+										<% for(var i=0; i<listmember.length; i++) {%>
+											<tr>
+												<td class="cell"><%= listmember[i].prefix %> <%= listmember[i].firstname %> <%= listmember[i].lastname %> </td>
+												<td class="cell"> <%= listmember[i].email %></td>
+												<td class="cell"><%= listmember[i].car_carregistration %> </td>
+												<td class="cell"><span class=""><%= listmember[i].cardNumber %></span>
+												</td>
+												<td class="cell">
+													<a type="button"
+														class="btn btn-outline-success" href="/profile/<%= listmember[i].id %> ">เรียกดู</a>
+													<a type="button"
+														class="btn btn-outline-danger" href="/deletemember/<%= listmember[i].id %> ">ลบผู้ใช้</a>
+												</td>
+											</tr>
+
 										
-											<td class="cell"><span class="">1854790582</span>
-											</td>
-											<td class="cell">
-												<button type="button" class="btn btn-outline-success">เรียกดู</button>
-												<button type="button" class="btn btn-outline-danger">ลบผู้ใช้</button>
-											</td>
-											
-										</tr>
+											<% } %>
+
 									</tbody>
 								</table>
 							</div>
@@ -265,15 +248,15 @@
 		$('#example').DataTable({
 			dom: 'Bfrtip',
 			buttons: [
-				'excel', 'pdf', 'print',
-				{
-					extend: 'csv',
-					charset: 'UTF-8',
-					fieldSeparator: ';',
-					bom: true,
-					filename: 'CsvTest',
-					title: 'CsvTest'
-				}
+			
+				// {
+				// 	extend: 'csv',
+				// 	charset: 'UTF-8',
+				// 	fieldSeparator: ';',
+				// 	bom: true,
+				// 	filename: 'CsvTest',
+				// 	title: 'CsvTest'
+				// }
 
 			]
 		});

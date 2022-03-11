@@ -76,10 +76,7 @@
                                         class="rounded-circle" src="assets/images/atmin.jpg"></a>
                                 <ul aria-labelledby="user-dropdown-toggle" class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="account.html">เกี่ยวกับเรา</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+                                        <a class="dropdown-item" href="/logout">ออกจากระบบ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -106,7 +103,7 @@
                     <ul class="app-menu list-unstyled accordion" id="menu-accordion">
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link active" href="dashboard.html"><span class="nav-icon"><svg
+                            <a class="nav-link active" href="/dashboard"><span class="nav-icon"><svg
                                         class="bi bi-house-door" height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -117,22 +114,13 @@
                                     </svg></span> <span class="nav-link-text">หน้าหลัก</span></a>
                             <!--//nav-link-->
                         </li>
-
-
-
-
-                        <li class="nav-item">
-							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-										height="1em" viewbox="0 0 16 16" width="1em"
-										xmlns="http://www.w3.org/2000/svg"></svg></span> <span
-									class="nav-link-text">การจอง</span></a>
-							<!--//nav-link-->
-						</li>
                         <!--//nav-item-->
+
+
+
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
+                            <a class="nav-link" href="income"><span class="nav-icon"><svg class="bi bi-card-list"
                                         height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">รายได้</span></a>
@@ -141,7 +129,7 @@
                         <!--//nav-item-->
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="member.html"><span class="nav-icon"><svg class="bi bi-card-list"
+                            <a class="nav-link" href="/member"><span class="nav-icon"><svg class="bi bi-card-list"
                                         height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">สมาชิก</span></a>
@@ -150,8 +138,8 @@
                         <!--//nav-item-->
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="orders.html"><span class="nav-icon"><svg class="bi bi-card-list"
-                                        height="1em" viewbox="0 0 16 16" width="1em"
+                            <a class="nav-link" href="/parkingreport"><span class="nav-icon"><svg
+                                        class="bi bi-card-list" height="1em" viewbox="0 0 16 16" width="1em"
                                         xmlns="http://www.w3.org/2000/svg"></svg></span> <span
                                     class="nav-link-text">รายงานการเข้าลานจอด</span></a>
                             <!--//nav-link-->
@@ -177,17 +165,17 @@
                     </div>
 
 
-                    <form action="/action_page.php">
+                    <!-- <form action="/action_page.php">
                         <label for="birthday">วันที่:</label>
                         <input type="date" id="birthday" name="birthday">
                         <label for="birthday">ถึง:</label>
                         <input type="date" id="birthday" name="birthday">
                         <input type="submit" value="ค้นหา" class="btn app-btn-primary">
-                        <a type="button" class="btn app-btn-secondary"  href="/action"> ทั้งหมด</a> 
+                        <a type="button" class="btn app-btn-secondary" href="/action"> ทั้งหมด</a>
                     </form>
+ -->
 
-                    
-                    
+
                     <div class="panel-body mt-2">
                         <div class="card">
                             <div class="container mt-2">
@@ -204,105 +192,45 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="cell">01-06-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">10.30</span>
-                                            </td>
-                                            <td class="cell">
-                                                <span class="badge bg-danger">14.50</span>
-                                            </td>
-                                        </tr>
 
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
+                                        <% for(var i=0; i<parkingpost.length; i++) {%>
 
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
+                                            <tr>
+                                                <td class="cell">
+                                                    <%= parkingpost[i].bookingtimestamp.toLocaleString() %>
+                                                </td>
+                                                <td class="cell">
+                                                    <%= parkingpost[i].prefix %>
+                                                        <%= parkingpost[i].firstname %>
+                                                            <%= parkingpost[i].lastname %>
+                                                </td>
+                                                <td class="cell">
+                                                    <%= parkingpost[i].car_carregistration %>
+                                                </td>
+                                                <td class="cell"><span class="badge bg-success">   <%= parkingpost[i].timeincar.toLocaleString() %></span>
+                                                </td>
+                                                <td class="cell">
+                                            
 
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
+                                                    <% if ( parkingpost[i].timeoutcar !== null) { %>
+                                                        <span class="badge bg-danger">
+                                                            <%= parkingpost[i].timeoutcar.toLocaleString() %>
+                                                        </span>
+                                                        <%} else { %>
+                                                        <span class="text-center"> - </span>
+                                                        <% } %>
+                                                </td>
+                                            </tr>
 
 
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
+                                            <% } %>
 
 
 
-                                        <tr>
-                                            <td class="cell">24-05-2021
-                                            </td>
-                                            <td class="cell"> ภัทรดนัย โกช่วย
-                                            </td>
-                                            <td class="cell">ม 112 </td>
-                                            <td class="cell"><span class="badge bg-success">12.30</span>
-                                            </td>
-                                            <td class="cell"><span class="badge bg-danger">13.50</span></td>
-                                        </tr>
 
-                                        
 
                                     </tbody>
-                                  
+
                                 </table>
                             </div>
                         </div>
@@ -353,16 +281,8 @@
             dom: 'Bfrtip',
             buttons: [
 
-                {
-
-                    extend: 'csv',
-                    charset: 'UTF-8',
-                    fieldSeparator: ';',
-                    bom: true,
-                    filename: 'CsvTest',
-                    title: 'CsvTest'
-                },
-
+            
+                { extend: 'excelHtml5', footer: true },
 
                 {
                     extend: 'print',
